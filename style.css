@@ -1,0 +1,230 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./peoble2.jpg);
+    background-size: cover;
+    overflow: hidden;
+    
+   
+}
+.earth
+{
+    width: 200px;
+    height: 200px;
+    background-image: url(earth3.jpg);
+    border-radius: 50%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+  transform: translate(-50%,-50%);
+  background-size: 700px 100%;
+  box-shadow: inset 0px 0px 5px #fdfff29e,
+  inset 30px 0px 50px #000;
+  animation: rotate 120s infinite linear;
+}
+@keyframes rotate{
+0%
+{
+ background-position: 0px;
+}
+100%
+{
+ background-position: 10000px;
+}
+
+
+}
+.orbit
+{
+    width: 350px;
+    height: 350px;
+    border: 1px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    animation: rotate-2 40s infinite linear;
+}
+.moon{
+    width: 75px;
+    height: 75px;
+    background:url(moon.jpg);
+    background-size: 100px;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 8%;
+  
+   
+}
+span
+{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 1);
+    animation: shooting 5s infinite linear;
+    scroll-behavior: none;
+
+}
+span:nth-child(1)
+{
+    top: 0;
+    right: 0;
+    left: initial;
+   
+    animation-duration: 16s;
+    scroll-behavior: none;
+}
+span:nth-child(2)
+{
+    top: 0;
+    right: 80px;
+    left: initial;
+   
+    animation-duration: 19s;
+    scroll-behavior: none;
+}
+span:nth-child(3)
+{
+    top: 80px;
+    right: 180px;
+    left: initial;
+    
+    animation-duration: 15s;
+    scroll-behavior: none;
+}
+span:nth-child(4)
+{
+    top: 5px;
+    right: 0px;
+    left: initial;
+    
+    animation-duration: 10s;
+    scroll-behavior: none;
+}
+span:nth-child(5)
+{
+    top: 10px;
+    right: 90px;
+    left: initial;
+    
+    animation-duration: 18s;
+    scroll-behavior: none;
+}
+span:nth-child(6)
+{
+    top: 20px;
+    right: 100px;
+    left: initial;
+    
+    animation-duration: 22s;
+    scroll-behavior: none;
+}
+span:nth-child(7)
+{
+    top: 100px;
+    right: 50px;
+    left: initial;
+ 
+    animation-duration: 25s;
+    scroll-behavior: none;
+}
+span:nth-child(8)
+{
+    top: 50px;
+    right: 150px;
+    left: initial;
+   
+    animation-duration: 20s;
+    scroll-behavior: none;
+}
+span:nth-child(9)
+{
+    top: 20%;
+    right: 150px;
+    left: initial;
+   
+    animation-duration: 24s;
+    scroll-behavior: none;
+}span:nth-child(10)
+{
+    top: 10%;
+    right: 0px;
+    
+    
+    animation-duration: 16s;
+    scroll-behavior: none;
+}
+span::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 2px;
+    background-image: linear-gradient(90deg,#fff,transparent);
+
+}
+@keyframes shooting{
+
+    0%
+    {
+       transform: rotate(315deg) translateX(0);
+       opacity: 1;
+       scroll-behavior: none;
+    
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-10000px);
+        opacity: 0;
+        scroll-behavior: none;
+        
+       
+    }
+}
+@keyframes rotate-2{
+  
+    100%
+    {
+     transform:  translate(-50%,-50%) rotate(360deg);
+    
+    }
+}
+@media only screen and (max-width:450px)
+{
+ .earth
+ {
+    width: 100px;
+    height: 100px;
+    animation: rotate 120s infinite linear;
+    
+ }
+ .orbit
+ {
+    width: 180px;
+    height: 180px;
+ }
+ .moon
+ {
+    width: 30px;
+    height: 30px;
+    top: 15%;
+ }
+}
